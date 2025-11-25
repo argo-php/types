@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Argo\Types\Alias;
+
+use Argo\Types\Atomic\BoolType;
+
+/**
+ * @api
+ * @extends BoolType<false>
+ * @psalm-immutable
+ */
+readonly class FalseType extends BoolType
+{
+    /**
+     * @codeCoverageIgnore
+     */
+    public function __construct()
+    {
+        parent::__construct(false);
+    }
+}
